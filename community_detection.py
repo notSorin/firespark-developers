@@ -14,10 +14,19 @@ import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import networkx as nx
 import json
+import constants
+import os
 
 #Read users data from file.
-with open("firespark_users.json") as usersFile:
-    jsonUsers = json.load(usersFile)
+jsonUsers = None
+
+if os.path.isfile(constants.USERS_FILE):
+    with open(constants.USERS_FILE) as usersFile:
+        jsonUsers = json.load(usersFile)
+
+if not jsonUsers:
+    print("Run get_all_users.py first to get the users from the network.")
+    exit()
 
 #Create a graph with all the user connections.
 G = nx.graph.Graph()
