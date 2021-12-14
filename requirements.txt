@@ -1,0 +1,5 @@
+community==1.0.0b1
+matplotlib==3.5.0
+networkx==2.6.3
+python_louvain==0.15
+requests==2.25.1
