@@ -9,7 +9,7 @@ USING_API_URL = API_PRE_URL
 
 SIGN_UP_URL = USING_API_URL + "RegisterUser.php" #Used for registering users.
 LOG_IN_URL = USING_API_URL + "LoginUser.php" #Used for logging into the network.
-GET_ALL_USERS_URL = USING_API_URL + "DEVGetAllProfiles.php" #Used for getting all the users in the network.
+GET_ALL_USERS_URL = USING_API_URL + "GetAllProfiles.php" #Used for getting all the users in the network.
 
 TOKEN_FILE = "token.txt"
 USERS_FILE = "firespark_users.json"
