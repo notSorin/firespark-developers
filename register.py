@@ -4,8 +4,7 @@ request.
 """
 
 import requests
-
-url = "http://35.242.203.63/api/pre/RegisterUser.php"
+import constants
 
 #Fill the next fields with the new user's data.
 email = "insert email"
@@ -19,7 +18,7 @@ postData = {
     "firstlastname": firstLastName
     }
 
-response = requests.post(url, data = postData)
+response = requests.post(constants.SIGN_UP_URL, data = postData)
 
 #The response will indicate whether the user was successfully registered,
 #or if an error occurred.
