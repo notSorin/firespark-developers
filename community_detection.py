@@ -9,7 +9,7 @@ This script demonstrates how to:
         each node using the user's username or their first and last name.)
 """
 
-import community as community_louvain
+from community import best_partition
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -33,7 +33,7 @@ for user in jsonUsers:
             G.add_edge(userId, followingUser)
 
 #Apply Louvain to the graph to determine its communities.
-partition = community_louvain.best_partition(G)
+partition = best_partition(G)
 
 #Calculate some values for drawing the graph.
 positions = nx.spring_layout(G, scale = 20)
