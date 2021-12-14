@@ -21,8 +21,7 @@ if not token:
     exit()
 
 #Make a POST request to the server to get the users.
-request = requests.post(constants.GET_ALL_USERS_URL, headers = {"Authorization": token})
-response = request.json()
+response = requests.post(constants.GET_ALL_USERS_URL, headers = {"Authorization": token}).json()
 usersArray = response["message"] #The message field will contain an array with all the users in the network.
 
 #Write all the users data to a json file.
